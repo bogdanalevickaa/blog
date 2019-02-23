@@ -20,6 +20,12 @@ body{
 .col-md-6{
 	width: 50%;
 }
+.col-md-1{
+	width: 8%;
+}
+.col-md-7{
+	width: 92%;
+}
 .row:after{
 	content: "";
 	display: block; 
@@ -48,5 +54,81 @@ body{
 }
 .menu a:hover{
 	background-color: #2c71b8;
+	color: white;
+}
+.logo img{
+	padding-top: 8px;
+}
+#search {
+  /* устанавливаем ширину формы,
+  ** равную ширине поля ввода (183 + 37 + 15)	*/
+  width: 200px;
+  height: 40px;
+  background-color: rgba(255,255,255,0.75);
+
+	text-align: center;
+	line-height: 50px;
+}
+
+/* делаем инпуты плавающими, чтобы убрать лишние отступы,
+** и отключаем бордюры */
+#search input {
+  float: left;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7em;
+}
+
+/* стили для поля ввода */
+#search .input {
+  width: 200px;
+  height: 40px;
+  /* внутренний отступ справа (37px) делаем больше левого,
+  ** т.к. там будет размещена кнопка отправки	*/
+  padding: 0 37px 1px 15px;
+  outline: none;
+  color: #2c71b8;
+  font-size: 21px;
+  font-family: roboto;
+  font-weight: lighter;
+}
+.input::-webkit-input-placeholder{
+	color: #2c71b8;
+}
+/* оформляем кнопку отправки */
+#search .submit {
+  width: 30px;
+  height: 30px;
+
+  /* смещаем кнопку влево на собственную ширину,
+  ** чтобы она оказалась над полем ввода */
+  margin-left: -34px;
+  margin-top: 5px;
+
+  /* по-нормальному, здесь достаточно было бы указать background: none;
+  ** но приходится указывать фон из-за бага в IE */
+  background: url(img/magnifier.png) no-repeat;
+  background-position: center;
+  background-color: #2c71b8;
+}
+.basket {
+	float: left;
+	position: relative;
+	background: url(img/icon.png) no-repeat;
+  background-position: center;
+}
+.basket4{
+	position: absolute;
+	top: 20px;
+	left: 15px;
+	float: left;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #2c71b8;
+	border-radius: 10px;
+	background-color: #2c71b8;
+	text-align: center;
 	color: white;
 }
