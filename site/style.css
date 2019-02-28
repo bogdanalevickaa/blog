@@ -52,37 +52,72 @@ body{
 	font-size: 21px;
 	color: #2c71b8;
 }
+.menu1{
+	list-style: none; /*убираем маркеры списка*/
+  	margin: 0; /*убираем отступы*/
+  	padding-left: 0; /*убираем отступы*/
+  	height: 50px; /*задаем высоту*/
+}
+.menu1 a{
+	text-decoration: none; /*убираем подчеркивание текста ссылок*/
+	background: #2c71b8; /*добавляем фон к пункту меню*/
+	color: white; /*меняем цвет ссылок*/
+	padding:0px 15px; /*добавляем отступ*/
+	line-height:50px; /*ровняем меню по вертикали*/
+	display: block; 
+	width: 293px;
+	text-align: left;
+	margin-left: -1px;
+}
 .menu a:hover{
 	background-color: #2c71b8;
 	color: white;
 }
+.menu1 a:hover{
+	background-color: white;
+	color: #2c71b8;
+}
+ /*Стили для скрытого выпадающего меню*/
+    .menu li > ul {
+        position:absolute;
+        display:none;   
+    }
+     
+    /*Делаем скрытую часть видимой*/
+    .menu li:hover > ul {
+        display:block; 
+        width:250px;  /*Задаем ширину выпадающего меню*/     
+    }
+	.menu li:hover > ul > li {
+        float:none; /*Убираем горизонтальное позиционирование*/
+    }
 .logo img{
 	padding-top: 8px;
 }
-#search {
+.border {
   /* устанавливаем ширину формы,
   ** равную ширине поля ввода (183 + 37 + 15)	*/
   width: 200px;
   height: 40px;
-  background-color: rgba(255,255,255,0.75);
-
 	text-align: center;
+	margin-left: 32px;
+	margin-top: 5px;
+	border: 1px solid #2c71b8;
 	line-height: 50px;
+	position: relative;
 }
-
-/* делаем инпуты плавающими, чтобы убрать лишние отступы,
-** и отключаем бордюры */
-#search input {
+.search{
+  height: 40px;
+}
+.search input{
   float: left;
-
-  display: flex;
+background-color: transparent;
+  /*display: flex;*/
   justify-content: center;
   align-items: center;
-  height: 7em;
-}
-
+  border:none;
+  /*height: 7em;*/
 /* стили для поля ввода */
-#search .input {
   width: 200px;
   height: 40px;
   /* внутренний отступ справа (37px) делаем больше левого,
@@ -94,35 +129,44 @@ body{
   font-family: roboto;
   font-weight: lighter;
 }
-.input::-webkit-input-placeholder{
+.search input::-webkit-input-placeholder{
 	color: #2c71b8;
 }
 /* оформляем кнопку отправки */
-#search .submit {
+.submit{
   width: 30px;
   height: 30px;
-
   /* смещаем кнопку влево на собственную ширину,
   ** чтобы она оказалась над полем ввода */
-  margin-left: -34px;
-  margin-top: 5px;
-
+  margin-left: 163px;
+  margin-top: 4px;
+  float: left;
+  position: absolute;
+  top: 0;
+}
+.submit input{
+	  width: 30px;
+  height: 30px;
+  /* смещаем кнопку влево на собственную ширину,
+  ** чтобы она оказалась над полем ввода */
+/*  margin-left: 163px;
+  margin-top: 4px;*/
   /* по-нормальному, здесь достаточно было бы указать background: none;
   ** но приходится указывать фон из-за бага в IE */
   background: url(img/magnifier.png) no-repeat;
   background-position: center;
   background-color: #2c71b8;
+  float: left;
 }
 .basket {
 	float: left;
-	position: relative;
-	background: url(img/icon.png) no-repeat;
-  background-position: center;
+	
 }
 .basket4{
-	position: absolute;
-	top: 20px;
-	left: 15px;
+	margin-left: 20px;
+	margin-top: -3px;
+	z-index: 1;
+	position: relative;
 	float: left;
 	width: 20px;
 	height: 20px;
@@ -131,4 +175,14 @@ body{
 	background-color: #2c71b8;
 	text-align: center;
 	color: white;
+}
+.basketimg{
+	margin-left: 30px;
+	width: 40px;
+	height: 40px;
+position: relative;
+top: 5px;
+	background: url(img/icon.png) no-repeat;
+	background-color: white;
+  background-position: center;
 }
