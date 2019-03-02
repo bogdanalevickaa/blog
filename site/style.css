@@ -56,24 +56,25 @@ body{
 	list-style: none; /*убираем маркеры списка*/
   	margin: 0; /*убираем отступы*/
   	padding-left: 0; /*убираем отступы*/
-  	height: 50px; /*задаем высоту*/
+  	height: 40px; /*задаем высоту*/
+  	border: 1px;
 }
 .menu1 a{
 	text-decoration: none; /*убираем подчеркивание текста ссылок*/
 	background: #2c71b8; /*добавляем фон к пункту меню*/
 	color: white; /*меняем цвет ссылок*/
 	padding:0px 15px; /*добавляем отступ*/
-	line-height:50px; /*ровняем меню по вертикали*/
 	display: block; 
-	width: 293px;
+	width: 286px;
 	text-align: left;
 	margin-left: -1px;
+	border: 1px;
 }
-.menu a:hover{
+.menu li:hover>a{
 	background-color: #2c71b8;
 	color: white;
 }
-.menu1 a:hover{
+.menu1 li:hover>a{
 	background-color: white;
 	color: #2c71b8;
 }
@@ -147,16 +148,11 @@ background-color: transparent;
 .submit input{
 	  width: 30px;
   height: 30px;
-  /* смещаем кнопку влево на собственную ширину,
-  ** чтобы она оказалась над полем ввода */
-/*  margin-left: 163px;
-  margin-top: 4px;*/
-  /* по-нормальному, здесь достаточно было бы указать background: none;
-  ** но приходится указывать фон из-за бага в IE */
   background: url(img/magnifier.png) no-repeat;
   background-position: center;
   background-color: #2c71b8;
   float: left;
+  border: none;
 }
 .basket {
 	float: left;
@@ -185,4 +181,20 @@ top: 5px;
 	background: url(img/icon.png) no-repeat;
 	background-color: white;
   background-position: center;
+}
+.img{
+	background-image: url(img/arrow1.png);
+	background-repeat: no-repeat;
+	background-position: 90%;
+	/*position: relative;
+	top: -31px;
+	left: 122px;
+	height: 12px;
+	width: 12px;*/
+}
+.menu li:hover>.img{
+	background-color: #2c71b8;
+	color: white;
+	
+	background-image: url(img/arrow2.png);
 }
