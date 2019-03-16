@@ -41,6 +41,9 @@ tr, td, th {
 .col-md-9{
 	width: 75%;
 }
+.col-md-9-1{
+	width: 33.33%;
+}
 .row:after{
 	content: "";
 	display: block; 
@@ -232,6 +235,9 @@ top: 5px;
 }
 .checkbox label{
 	position: relative;
+	font-size: 21px;
+	color:white; 
+	margin: 20px;
 }
 .checkbox label:before{
 	content: "";
@@ -239,6 +245,10 @@ top: 5px;
 	width: 10px;
 	height: 10px;
 	border: 1px solid white;
+	float:left;
+	vertical-align: middle;
+	position: absolute;
+	top:7px;
 }
 .checkbox input:checked + label:before{
 	background-color: white;
@@ -255,8 +265,14 @@ top: 5px;
 	color: white;
 }
 .block1{
+	font-size: 21px;
 	display: block;
 	font-weight: 100;
+	color: white;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.block1 > a{
 	color: white;
 }
 .block3{
@@ -264,15 +280,12 @@ top: 5px;
 	color: white;
 }
 .name_block{
-	margin-bottom: 20px;
+	margin-bottom: 25px;
+	font-size: 25px;
 }
 .checkbox{
 	width: 10px;
-	display: inline-block;
-}
-.element_sort_list{
-	display: inline-block;
-	padding: 10px;
+	display: block;
 }
 .submit_more{
 	width: 212px;
@@ -362,6 +375,7 @@ a{
 	border: 1px solid white;
 	margin: 16px 30px 16px 0px;
 	background-color: #2c71b8;
+	margin-left: 19px;
 }
 .table{
 	display: block;
@@ -371,8 +385,9 @@ a{
 	color: white;
 }
 .icon{
-	width: 273px;
+	width: 271px;
 	height: 181px;
+	line-height: 181px;
 	background-color: rgba(255,255,255,0.75);
 	text-align: center;
     vertical-align: inherit;
@@ -389,6 +404,9 @@ a{
 	    	white 50%, 
 	    	transparent 51%);
 	background-repeat: no-repeat;
+}
+.icon > img{
+    vertical-align: middle;
 }
 .icon_border1{
 	width: 30px;
@@ -407,7 +425,7 @@ a{
 	background-position: center;
     background-image: url(img/icon6.png);
 }
-.icon_border{
+.like{
 	width: 30px;
 	height: 30px;
 	border: 1px solid #2c71b8;
@@ -417,8 +435,10 @@ a{
     position: absolute;
     top: 50px;
     left: 232px;
+    background-color: transparent;
+    outline: none;
 }
-.icon_border:hover{
+.like:hover{
     background: #2c71b8;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -453,6 +473,9 @@ a{
 	font-size: 18px;
 	outline: none;
 }
+.more:hover{
+	background-color: rgba(255,255,255,0.2);
+}
 .add{
 	width: 212px;
 	height: 50px;
@@ -467,6 +490,9 @@ a{
 	text-align: center;
 	padding-right: 20px;  
 	outline: none;
+}
+.add:hover{
+	background-color: #2c71b8;
 }
 .load{
 	padding-bottom: 90px;
